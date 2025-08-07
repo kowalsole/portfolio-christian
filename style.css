@@ -331,6 +331,17 @@ footer {
         gap: 2rem;
         height: auto;
     }
+    #hero .hero-action-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    #hero .down-arrow {
+        position: relative;
+        margin-top: 1rem;
+        right: auto;
+        bottom: auto;
+        align-self: center;
+    }
     .hero-buttons {
         gap: 1rem;
         margin-bottom: 1rem;
