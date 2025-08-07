@@ -276,6 +276,16 @@ section {
     bottom: 2.5rem;
     height: 50px;
     width: 50px;
+    animation: bounce 1.25s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(5px);
+    }
 }
 
 /* Projects Section */
