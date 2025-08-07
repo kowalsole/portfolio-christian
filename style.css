@@ -37,6 +37,15 @@ body {
     animation: bounce 1.25s infinite;
 }
 
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+}
+
 /* Site Name */
 
 .site-name {
@@ -165,7 +174,7 @@ section {
     display: flex;
     justify-content: center;
     gap: 5rem;
-    height: 85vh;
+    height: 80vh;
     position: relative;
 }
 
@@ -303,17 +312,57 @@ section {
     text-align: center;
 }
 
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(5px);
-    }
+.program-link {
+    color: goldenrod;
+    font-weight: 750;
+    display: inline-block;
 }
+
+.program-link:hover {
+    color: lightblue;
+    text-decoration: none;
+    transform: scale(3);
+}
+
+/* Hide text trick */
+.program-link:hover ~ .after-link,
+.program-link:hover ~ .before-link {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.before-link {
+    transition: opacity 0.3s ease;
+}
+
+p:hover .before-link:not(:hover),
+p:hover .after-link:not(:hover),
+p:hover .program-link:not(:hover) {
+    opacity: 0;
+    pointer-events: none;
+} */
 
 /* Projects Section */
 
+.game-container {
+    text-align: center;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+#projects a img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 300px;
+    height: auto;
+    padding-top: 5rem;
+}
+
+.game-caption {
+    margin-top: 2rem;
+}
 
 /* Contact Section */
 
@@ -369,12 +418,10 @@ footer {
         flex-direction: column;
         align-items: center;
     }
-    #hero .down-arrow {
-        position: relative;
-        margin-top: 1rem;
-        right: auto;
-        bottom: auto;
-        align-self: center;
+    section .down-arrow {
+        position: static;
+        display: block;
+        margin: 1rem auto 0 auto;
     }
     .hero-buttons {
         gap: 1rem;

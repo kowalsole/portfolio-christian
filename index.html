@@ -52,14 +52,14 @@
                         <button>My Projects</button>
                         <button>Get in Touch</button>
                     </div>
-                    <img 
+                </div>
+            </div>
+            <img 
                         src="/assets/down-arrow.png"
                         alt="Arrow for page navigation"
                         class="down-arrow"
                         onclick="location.href='#about'"
                     >
-                </div>
-            </div>
         </section>
         <hr class="line">
         <section id="about">
@@ -69,7 +69,11 @@
                     <img src="/assets/programming-graphic.png" alt="Coding graphic">
                 </div>
                 <div class="about-text">
-                    <p class="text-p1">I'm currently enrolled in the Future Code NYC x Codesmith program, where I'm learning software engineering.</p>
+                    <p class="text-p1">
+                        <span class="before-link">I'm currently enrolled in the </span>
+                        <a href="https://www.become-irreplaceable.dev/future-code" target="_blank" class="program-link">future code nyc x codesmith</a>
+                        <span class="after-link">program, where I'm learning software engineering.</span>
+                    </p>
                 </div>
             </div>
             <img 
@@ -82,7 +86,14 @@
         <hr class="line">
         <section id="projects">
             <h1 class="text-p1">My Projects</h1>
-            <a href="game/index.html" target="_blank" rel="noopener noreferrer">Medeival crossroads text adventure game</a>
+            <div class="game-container">
+                <a href="game/index.html" target="_blank" rel="noopener noreferrer" class="project-image-link">
+                    <img src="assets/game-thumbnail.jpg" 
+                        alt="Medeival Crossroads Text Adventure Game"
+                        class="game-image">
+                </a>
+                <p class="game-caption">Medeival Crossroads Text Adventure Game</p>
+            </div>
             <img
                 src="/assets/down-arrow.png"
                 alt="Arrow for page navigation"
