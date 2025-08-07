@@ -157,6 +157,7 @@ section {
     justify-content: center;
     gap: 5rem;
     height: 85vh;
+    position: relative;
 }
 
 .photo-container {
@@ -165,12 +166,14 @@ section {
     width: 300px;
     margin: auto 0;
     position: relative;
+    flex-shrink: 0;
 }
 
 .photo-container img {
     width: 100%;
     height: 100%;
     transition: opacity 0.3s ease;
+    object-fit: cover;
 }
 
 .photo-container .hover-text {
@@ -203,8 +206,50 @@ section {
     text-align: center;
 }
 
+.hero-action-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    justify-content: center;
+}
+
+.hero-buttons {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.hero-buttons button {
+    padding: 0.75rem 1.5rem;
+    min-width: 140px;
+    height: 40px;
+    font-size: 1rem;
+    border: 2px solid goldenrod;
+    background-color: white;
+    color: goldenrod;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    flex-shrink: 0;
+}
+
+.hero-buttons button:hover {
+    background-color: goldenrod;
+    color: white;
+}
 
 /* About Section */
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    justify-content: center;
+    margin-top: 10rem;
+}
 
 .about-photo-container {
     display: flex;
@@ -276,4 +321,32 @@ footer {
         top: 1rem;
         right: 1rem;
     }
+    .down-arrow {
+        bottom: 6rem;
+        right: 2rem;
+    }
+    #hero {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        height: auto;
+    }
+    .hero-buttons {
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+    .about-content {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+    .about-photo-container {
+        width: auto;
+        height: 150px;
+        margin-bottom: 2rem;
+    }
+    .about-text {
+        max-width: 90%;
+    }
+    
 }
