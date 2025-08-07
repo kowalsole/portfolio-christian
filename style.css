@@ -1,0 +1,279 @@
+/* Main stylesheet */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(247, 247, 247);
+    color: rgba(51, 51, 51, 1);
+}
+
+.line {
+    width: 200px;
+    border: none;
+    border-top: 2px solid #ccc;
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.6;
+    border-radius: 2px;
+}
+
+/* Site Name */
+
+.site-name {
+    text-align: center;
+    padding: 1rem 1rem;
+}
+
+/* Navbar */
+
+nav, .nav-list {
+    display: flex;
+}
+
+nav {
+    height: 5vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-list {
+    list-style: none;
+    font-size: 1.25rem;
+    gap: 1em;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+}
+
+a:hover {
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    text-decoration-color: goldenrod;
+}
+
+.name-logo {
+    font-size: 2.5rem;
+}
+
+.name-logo:hover {
+    cursor: default;
+}
+
+/* Hamburger Menu */
+
+#hamburger-navbar {
+    display: none;
+}
+
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-icon span {
+    background-color: black;
+    height: 2px;
+    width: 100%;
+    transition: all 300ms ease-in-out;
+}
+
+.hamburger-links {
+    max-height: 0;
+    width: fit-content;
+    position: absolute;
+    top: 3rem;
+    right: 0;
+    overflow: hidden;
+    transition: all 300ms ease-in-out;
+}
+
+.hamburger-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: all 300ms ease-in-out;
+    /* Subtle visual cue instead of background color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    padding: 0.5rem 0;
+    border-radius: 0.25rem;
+    backdrop-filter: blur(4px);
+}
+
+.hamburger-links li {
+    list-style: none;
+}
+
+.hamburger-links.open {
+    max-height: 300px;
+}
+
+
+/* All Sections */
+
+section {
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+    position: relative;
+}
+
+.text-p1 {
+    text-align: center;
+}
+
+/* Hero Section */
+
+#hero {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 85vh;
+}
+
+.photo-container {
+    display: flex;
+    height: 300px;
+    width: 300px;
+    margin: auto 0;
+    position: relative;
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease;
+}
+
+.photo-container .hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-weight: bold;
+    text-align: center;
+}
+
+.photo-container:hover img {
+    opacity: 0.2;
+}
+
+.photo-container:hover .hover-text {
+    opacity: 1;
+}
+
+.hero-text {
+    align-self: center;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 60ch;
+}
+
+.hero-text p {
+    text-align: center;
+}
+
+
+/* About Section */
+
+.about-photo-container {
+    display: flex;
+    height: 200px;
+    width: 200px;
+    margin: auto 0;
+    position: relative;
+}
+
+.about-text {
+    align-self: center;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 60ch;
+}
+
+.about-text p {
+    text-align: center;
+}
+
+.down-arrow {
+    position: absolute;
+    right: 2rem;
+    bottom: 2.5rem;
+    height: 50px;
+    width: 50px;
+}
+
+/* Projects Section */
+
+
+/* Contact Section */
+
+.up-arrow {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    font-size: x-small;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 750px) {
+    #desktop-navbar {
+        display: none;
+    }
+    #hamburger-navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        position: relative;
+    }
+    .hamburger-menu {
+        margin-left: auto;
+    }
+    .hamburger-icon {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+}

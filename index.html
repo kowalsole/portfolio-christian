@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christian Kowalczuk</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="site-name">
+           <a href="/">Christian Kowalczuk</a> 
+        </h1>
+        <nav id="desktop-navbar">
+            <div>
+                <ul class="nav-list">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <nav id="hamburger-navbar">
+            <div class="hamburger-menu">
+                <div class="hamburger-icon" onclick="openMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="hamburger-links">
+                    <li><a href="#about" onclick="openMenu()">About</a></li>
+                    <li><a href="#projects" onclick="openMenu()">Projects</a></li>
+                    <li><a href="#contact" onclick="openMenu()">Contact</a></li>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <hr class="line">
+    <main>
+        <section id="hero">
+            <div class="photo-container">
+                    <img 
+                    src="assets/pfp-placeholder.png" 
+                    alt="Christian Kowalczuk's photo"
+                    >
+                <div class="hover-text">Placeholder - to be updated</div>
+            </div>
+            <div class="hero-text">
+                <p class="text-p1">Hi I'm Christian Kowalczuk — an aspiring software engineer based in Brooklyn, NY. Stay tuned.</p>
+            </div>
+            <img 
+                src="/assets/down-arrow.png"
+                alt="Arrow for page navigation"
+                class="down-arrow"
+                onclick="location.href='#about'"
+            >  
+        </section>
+        <hr class="line">
+        <section id="about">
+            <h1 class="text-p1">About Me</h1>
+            <div class="about-photo-container">
+                <img 
+                src="/assets/programming-graphic.png" 
+                alt="Coding graphic"
+                >
+            </div>
+            <div class="about-text">
+                <p class="text-p1">I'm currently enrolled in the Future Code NYC x Codesmith program, where I'm learning software engineering.</p>
+            <img 
+                src="/assets/down-arrow.png"
+                alt="Arrow for page navigation"
+                class="down-arrow"
+                onclick="location.href='#projects'"
+            >
+        </section>
+        <hr class="line">
+        <section id="projects">
+            <h1 class="text-p1">My Projects</h1>
+            <a href="game/index.html" target="_blank" rel="noopener noreferrer">Medeival crossroads text adventure game</a>
+            <img
+                src="/assets/down-arrow.png"
+                alt="Arrow for page navigation"
+                class="down-arrow"
+                onclick="location.href='#contact'"
+            >
+        </section>
+        <hr class="line">
+        <section id="contact">
+            <h1 class="text-p1">Contact Me</h1>
+        </section>
+        <hr class="line">
+        <img
+                src="/assets/up-arrow.png"
+                alt="Back to top"
+                class="up-arrow"
+                onclick="location.href='/'"
+            >
+    </main>
+    <footer>
+        <p>&copy; 2025 Christian Kowalczuk</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
