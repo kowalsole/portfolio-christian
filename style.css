@@ -405,19 +405,36 @@ p:hover .program-link:not(:hover) {
 
 /* Contact Section */
 
+.contact-container {
+    padding: 2rem 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 .contact-container h1, p {
     text-align: center;
 }
 
 .contact-container p {
-    margin-top: 4rem;
+    margin-top: 10rem;
+    margin-bottom: 6rem;
 }
 
 .contact-icons {
     display: flex;
     justify-content: center;
     gap: 2rem;
-    margin-top: 4rem;
+    margin-top: 10rem;
+    align-items: center;
+}
+
+.contact-icon img {
+    width: 125px;
+    height: 125px;
+}
+
+.contact-icon img:hover {
+    transform: scale(1.1);
 }
 
 .up-arrow {
