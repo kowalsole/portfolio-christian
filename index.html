@@ -49,8 +49,8 @@
                 <p class="text-p1">Hi I'm Christian Kowalczuk — an aspiring software engineer based in Brooklyn, NY. Stay tuned.</p>
                 <div class="hero-action-row">
                     <div class="hero-buttons">
-                        <button>My Projects</button>
-                        <button>Get in Touch</button>
+                        <button onclick="location.href='#projects'">My Projects</button>
+                        <button onclick="location.href='#contact'">Get in Touch</button>
                     </div>
                 </div>
             </div>
@@ -87,10 +87,11 @@
         <section id="projects">
             <h1 class="text-p1">My Projects</h1>
             <div class="game-container">
-                <a href="game/index.html" target="_blank" rel="noopener noreferrer" class="project-image-link">
+                <a href="game/index.html" target="_blank" rel="noopener noreferrer" class="game-link">
                     <img src="assets/game-thumbnail.jpg" 
                         alt="Medeival Crossroads Text Adventure Game"
                         class="game-image">
+                    <div class="hover-text">Click to Play!</div>
                 </a>
                 <p class="game-caption">Medeival Crossroads Text Adventure Game</p>
             </div>
@@ -103,7 +104,21 @@
         </section>
         <hr class="line">
         <section id="contact">
-            <h1 class="text-p1">Contact Me</h1>
+            <div class="contact-container">
+                <h1 class="text-p1">Contact Me</h1>
+                <p>Feel free to reach out via email or social media!</p>
+                <div class="contact-icons">
+                    <a href="mailto:someone@example.com" class="contact-icon" target="_blank">
+                        <img src="assets/email-icon.png" alt="email icon">
+                    </a>
+                    <a href="https://github.com/" class="contact-icon" target="_blank">
+                        <img src="assets/github-icon.png" alt="github icon">
+                    </a>
+                    <a href="https://www.linkedin.com/" class="contact-icon" target="_blank">
+                        <img src="assets/linkedin-icon.png" alt="linkedin icon">
+                    </a>
+                </div>
+            </div>
         </section>
         <hr class="line">
         <img

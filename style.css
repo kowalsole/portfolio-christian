@@ -1,5 +1,7 @@
 /* Main stylesheet */
 
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -346,25 +348,77 @@ p:hover .program-link:not(:hover) {
 /* Projects Section */
 
 .game-container {
-    text-align: center;
-    max-width: 300px;
+    position: relative;
+    max-width: 100%;
     margin: 0 auto;
 }
 
-#projects a img {
+.game-link {
+    display: block;
+    position: relative;
+}
+
+.hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: darkorange;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    pointer-events: none;
+}
+
+
+.game-container a img {
     display: block;
     margin: 0 auto;
     max-width: 100%;
     width: 300px;
     height: auto;
     padding-top: 5rem;
+    border-radius: 20px;
+}
+
+.game-container a img:hover {
+    opacity: 0.1;
+}
+.game-link img:hover + .hover-text {
+    opacity: 1;
 }
 
 .game-caption {
     margin-top: 2rem;
+    display: block;
+    text-align: center;
+    transition: font-family 0.3s ease, color 0.3s ease;
+    cursor: default;
+}
+
+.game-caption:hover {
+    font-family: 'UnifrakturCook';
+    color: black;
+    transform: scale(2.5);
 }
 
 /* Contact Section */
+
+.contact-container h1, p {
+    text-align: center;
+}
+
+.contact-container p {
+    margin-top: 4rem;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 4rem;
+}
 
 .up-arrow {
     position: fixed;
